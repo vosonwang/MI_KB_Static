@@ -1,8 +1,6 @@
-# iView-project Template
+# Messeinfor_Knowledge_Database_Static
 
-在iView基础上做的一个模版
-
-Vue.js 2 + vue-router + webpack2 + iView 2 + Vuex
+webpack2 + iView 2 + Vuex + VueRouter + Mavon-editor
 
 ## Install
 ```bush
@@ -24,16 +22,14 @@ npm run build
 ### dependencies
 ```
 "vuex": "^2.4.1"
-```
-
-optional
-```
 "mavon-editor": "^2.2.9",
+"vue-i18n": "^7.3.2"
 ```
 
 ### devDependencies
 ```
-"babel-preset-stage-0": "^6.24.1",
+"babel-preset-env": "^1.6.1",
+"babel-preset-stage-2": "^6.24.1",
 
 ```
 
