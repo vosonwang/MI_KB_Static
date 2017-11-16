@@ -5,32 +5,14 @@
     <div class="layout-content">
         <Row>
             <Col span="5">
-            <Menu active-name="1-2" width="auto" >
-                <Submenu name="1">
-                    <template slot="title">
-
-                        Item 1
-                    </template>
-                    <MenuItem name="1-1">Option 1</MenuItem>
-                    <MenuItem name="1-2">Option 2</MenuItem>
-                    <MenuItem name="1-3">Option 3</MenuItem>
-                </Submenu>
-                <Submenu name="2">
-                    <template slot="title">
-
-                        Item 2
-                    </template>
-                    <MenuItem name="2-1">Option 1</MenuItem>
-                    <MenuItem name="2-2">Option 2</MenuItem>
-                </Submenu>
-                <Submenu name="3">
-                    <template slot="title">
-
-                        Item 3
-                    </template>
-                    <MenuItem name="3-1">Option 1</MenuItem>
-                    <MenuItem name="3-2">Option 2</MenuItem>
-                </Submenu>
+            <Menu :open-names="['1','2','3']" >
+                <template v-for="(li,index) in list">
+                    <Submenu :name="index">
+                        <template slot="title">
+                            {{li.item}}
+                        </template>
+                    </Submenu>
+                </template>
             </Menu>
             </Col>
             <Col span="19">
@@ -49,5 +31,15 @@
 
 </template>
 <script>
-    export default {}
+    export default {
+        data() {
+            return {
+                list: [
+                    {id: "cc818aac-5df9-11e7-8edb-00163e0665970faadb", item: "展会管理",sort:1, child: [{id:"cc818aac-5df9-11e7-8edb-00163e0665970faadb",subItem:"展会及网站"},{id:"cc818aac-5df9-11e7-8edb-00163e0665970faadb",subItem:"同期活动"}]},
+                    {id: "cc818aac-5df9-11e7-8edb-00163e0665970faadb", item: "市场推广",sort:2, child: [{id:"cc818aac-5df9-11e7-8edb-00163e0665970faadb",subItem:"邮件模板"},{id:"cc818aac-5df9-11e7-8edb-00163e0665970faadb",subItem:"短信模板"},{id:"cc818aac-5df9-11e7-8edb-00163e0665970faadb",subItem:"市场活动"},{id:"cc818aac-5df9-11e7-8edb-00163e0665970faadb",subItem:"设置"}]},
+                    {id: "cc818aac-5df9-11e7-8edb-00163e0665970faadb", item: "参展商CRM",sort:3, child: [{id:"cc818aac-5df9-11e7-8edb-00163e0665970faadb",subItem:"商机"},{id:"cc818aac-5df9-11e7-8edb-00163e0665970faadb",subItem:"设置"}]},
+                ]
+            }
+        }
+    }
 </script>
