@@ -1,14 +1,14 @@
 export default {
     'zh-CN': {
         index: {
-            org: "主办方",
+            organizer: "主办方",
             exhibitor: "展商",
             visitor:"观众"
         }
     },
     'en-US': {
         index: {
-            org: "Organizer",
+            organizer: "Organizer",
             exhibitor: "Exhibitor",
             visitor:"Visitor"
         }
