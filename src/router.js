@@ -12,16 +12,27 @@ const routers = [
     {
         path: '/kb/organizer',
         meta: {
-            /*TODO 1.修改title*/
+
             title: '主办方'
         },
         name:'organizer',
-        component: (resolve) => require(['./views/organizer.vue'], resolve)
+        component: (resolve) => require(['./views/organizer.vue'], resolve),
+        children: [
+            {
+                path: 'test',
+                meta: {
+
+                    title: 'test'
+                },
+                name:'test',
+                component: (resolve) => require(['./views/test.vue'], resolve)
+            }
+        ]
     },
     {
         path: '/kb/exhibitor',
         meta: {
-            /*TODO 1.修改title*/
+
             title: '展商'
         },
         name:'exhibitor',
@@ -30,7 +41,7 @@ const routers = [
     {
         path: '/kb/visitor',
         meta: {
-            /*TODO 1.修改title*/
+
             title: '观众'
         },
         name:'visitor',

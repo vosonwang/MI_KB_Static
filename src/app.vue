@@ -3,7 +3,7 @@
 </style>
 <template>
     <div class="layout">
-        <Menu mode="horizontal"  >
+        <Menu mode="horizontal"  active-name="1">
             <div class="layout-assistant">
                 <router-link :to="{ name: 'organizer'}">
                     <MenuItem name="1" style="height: 60px">{{ $t("index.organizer") }}</MenuItem>

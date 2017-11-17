@@ -23,6 +23,8 @@
                         <BreadcrumbItem href="#">Projects</BreadcrumbItem>
                         <BreadcrumbItem>iView</BreadcrumbItem>
                     </Breadcrumb>
+                    <router-link :to="{ name: 'test'}">test</router-link>
+                    <router-view></router-view>
                 </div>
             </div>
             </Col>
